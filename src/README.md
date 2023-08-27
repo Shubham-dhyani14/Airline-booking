@@ -22,3 +22,38 @@ Execute `npm install` on the same path as of your root directory of the download
 
 `ANOTHER_API_KEY`
 
+add config.json in config folder and add below code as json obj
+```
+{
+    "development": {
+    "username": "root",
+    "password": <your db password>,
+    "database": <your db name>,
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+```
+
+
+## Setup sequelize
+
+- install pkgs for ORM
+
+`npm i sequelize mysql2`
+
+`npm install --save-dev sequelize-cli`
+
+- initialise 
+
+`npx sequelize-cli init`
+
+- This will create following folders
+
+   - `config`, contains config.json file, which tells CLI how to connect with database
+    - `models`, contains all models for your project
+    - `migrations`, contains all migration files
+seeders, contains all seed files
+
+## Create db using sequelize 
+`npx sequelize db:create` : to create DB with name mentioned in config.json
