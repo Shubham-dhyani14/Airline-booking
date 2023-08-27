@@ -57,3 +57,16 @@ seeders, contains all seed files
 
 ## Create db using sequelize 
 `npx sequelize db:create` : to create DB with name mentioned in config.json
+
+`npx sequelize model:generate --name City --attributes name:String` : to create city model
+
+`npx sequelize db:migrate` : create table from model in db
+
+migration attributes applies to tabels and models on js lvl.
+- checkout changes on database
+
+ ``use flight_search_db_dev``
+
+ `show tables;`
+
+ ` select * from cities;`
