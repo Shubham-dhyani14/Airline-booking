@@ -12,7 +12,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true ,// after this undo migration and run migration again
+
       },
       createdAt: {
         allowNull: false,

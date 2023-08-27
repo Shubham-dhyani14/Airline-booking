@@ -70,3 +70,8 @@ migration attributes applies to tabels and models on js lvl.
  `show tables;`
 
  ` select * from cities;`
+
+ - adding unique property to model and migration to make unique entries in db
+
+` unique: true `
+after this undo migration and run migration again
