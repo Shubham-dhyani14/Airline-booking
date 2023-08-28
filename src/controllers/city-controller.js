@@ -1,7 +1,7 @@
 const { response } = require('express');
 const {CityService} = require('../services/index') ;
 const { CityRepository } = require('../repository');
-
+// the layer will be used by router
 const cityService = new CityService() ;
 const create = async(req, res)=>{
     try{
@@ -82,4 +82,11 @@ const update = async (req , res)=>{
     }
     
 
+}
+
+module.exports = {
+    create , 
+    destroy , 
+    get, 
+    update,
 }
