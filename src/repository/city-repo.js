@@ -1,4 +1,3 @@
-const city = require('../models/city');
 const {City} = require('../models/index') ;
 
 
@@ -31,7 +30,7 @@ class CityRepository{
     async updateCity(cityId , data)
     {
         try{
-            const cityId = await City.update(data , {
+            const city = await City.update(data , {
                 where: {
                     id : cityId
                 }
@@ -46,7 +45,7 @@ class CityRepository{
     async getCity(cityId)
     {
         try{
-            const cityId = await City.findByPk(cityId) ;
+            const city = await City.findByPk(cityId) ;
             return city ;
         }
         catch(error)
@@ -54,6 +53,7 @@ class CityRepository{
             throw {error} ;
         }
     }
+
 }
 
 module.exports = CityRepository ;
